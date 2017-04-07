@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="TryTry.Style_Example">
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<Style x:Key="labelstyle1_page" TargetType="Label">
+				<Setter Property="TextColor" Value="Red"/>
+			</Style>
+			<Style x:Key="labelstyle2_page" TargetType="Label">
+				<Setter Property="TextColor" Value="Green"/>
+			</Style>
+		</ResourceDictionary>
+	</ContentPage.Resources>
+	<ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0"/>
+	</ContentPage.Padding>
+	<ContentPage.Content>
+		<StackLayout>
+			<StackLayout.Resources>
+				<ResourceDictionary>
+					<Style x:Key="labelstyle1_view" TargetType="Label">
+						<Setter Property="TextColor" Value="Blue"/>
+					</Style>
+					<Style x:Key="labelstyle2_view" TargetType="Label">
+						<Setter Property="TextColor" Value="Aqua"/>
+					</Style>
+				</ResourceDictionary>
+			</StackLayout.Resources>
+<!--			<Label Text="Look My Text Color." Style="{StaticResource labelstyle2_app}" />-->
+<!--			DynamicResource only Page Level Style-->
+			<Label Text="Look My Text Color." Style="{DynamicResource mystyle}" />
+<!--			<Label Text="Look My Text Color." Style="{DynamicResource TitleStyle}" />-->
+<!--			<Label Text="Look My Text Color." Style="{DynamicResource SubtitleStyle}" />-->
+			<Button Text="clicke me change above label text color" Clicked="Handle_Clicked" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

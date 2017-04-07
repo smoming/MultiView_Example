@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="TryTry.MyTabbedPage">
+
+	<ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" />
+	</ContentPage.Padding>
+	<ContentPage.Content>
+		<Grid RowSpacing="0" ColumnSpacing="0">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+				<RowDefinition Height="1" />
+				<RowDefinition Height="55"/>
+			</Grid.RowDefinitions>
+
+			<ContentView x:Name="xContextPlaceHolder" Grid.Column="0" Grid.Row="0">
+				<ContentView.Content>
+					<Label Text="請選擇下方欲前往之網站" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="25"/>
+				</ContentView.Content>
+			</ContentView>
+			<BoxView Grid.Column="0" Grid.Row="1" Color="Gray" />
+			<Grid Grid.Column="0" Grid.Row="2" RowSpacing="0" ColumnSpacing="0">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition />
+				</Grid.RowDefinitions>
+				<StackLayout Orientation="Vertical" VerticalOptions="End" Grid.Column="0" Grid.Row="0" >
+					<Image Source="facebook.png" />
+					<Label Text="Facebook" FontSize="10" HorizontalTextAlignment="Center" />
+					<StackLayout.GestureRecognizers>
+						<TapGestureRecognizer Tapped="GoFacebook" />
+					</StackLayout.GestureRecognizers>
+				</StackLayout>
+				<StackLayout Orientation="Vertical" VerticalOptions="End" Grid.Column="1" Grid.Row="0">
+					<Image Source="google.png" />
+					<Label Text="Google" FontSize="10" HorizontalTextAlignment="Center" />
+					<StackLayout.GestureRecognizers>
+						<TapGestureRecognizer Tapped="GoGoogle" />
+					</StackLayout.GestureRecognizers>
+				</StackLayout>
+				<StackLayout Orientation="Vertical" VerticalOptions="End" Grid.Column="2" Grid.Row="0">
+					<Image Source="microsoft.png" />
+					<Label Text="Microsoft" FontSize="10" HorizontalTextAlignment="Center" />
+					<StackLayout.GestureRecognizers>
+						<TapGestureRecognizer Tapped="GoMicrosoft" />
+					</StackLayout.GestureRecognizers>
+				</StackLayout>
+			</Grid>
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>

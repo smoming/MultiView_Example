@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TryTry.ListView_Example">
+	<ContentPage.Content>
+		<ListView 
+			x:Name="xListView" 
+			ItemTapped="Handle_ItemTapped" >
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<!--<TextCell 
+						Text="{Binding Name}" 
+						Detail="{Binding Path=BirthDay, StringFormat='{0:yyyy/MM/dd}'}" />-->
+					<ViewCell>
+						<StackLayout Orientation="Horizontal" Padding="20,0,0,0">
+							<StackLayout Orientation="Vertical" WidthRequest="100" Spacing="0">
+								<Label Text="{Binding Name}" />
+								<Label Text="{Binding Path=BirthDay, StringFormat='{0:yyyy/MM/dd}'}" FontSize="12" TextColor="Gray" />
+							</StackLayout>
+							<Label Text="FavoriteColor:" VerticalTextAlignment="Center"/>
+							<BoxView 
+								WidthRequest="50"  
+								Color="{Binding FavoriteColor}" />
+						</StackLayout>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</ContentPage.Content>
+</ContentPage>

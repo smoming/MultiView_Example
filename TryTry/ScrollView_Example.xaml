@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="TryTry.ScrollView_Example">
+	<ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0"/>
+	</ContentPage.Padding>
+	<ContentPage.Content>
+			<StackLayout Orientation="Vertical">
+				<ScrollView x:Name="xMenu">
+					<StackLayout Orientation="Horizontal">
+							<Grid>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="*"/>
+									<ColumnDefinition Width="*"/>
+									<ColumnDefinition Width="*"/>
+									<ColumnDefinition Width="*"/>
+									<ColumnDefinition Width="*"/>
+								</Grid.ColumnDefinitions>
+							<Button Text="Photo1" Clicked="Photo1_Clicked" Grid.Column="0"/>
+							<Button Text="Photo2" Clicked="Photo2_Clicked" Grid.Column="1"/>
+							<Button Text="Photo3" Clicked="Photo3_Clicked" Grid.Column="2"/>
+							<Button Text="Photo4" Clicked="Photo4_Clicked" Grid.Column="3"/>
+							<Button Text="Photo5" Clicked="Photo5_Clicked" Grid.Column="4"/>
+							</Grid>
+							<!--<Button Text="英國短毛貓" Clicked="Photo1_Clicked" WidthRequest="100" />
+							<Button Text="美國短毛貓" Clicked="Photo2_Clicked" WidthRequest="100" />
+							<Button Text="孟加拉貓" Clicked="Photo3_Clicked" WidthRequest="100" />
+							<Button Text="俄羅斯藍貓" Clicked="Photo4_Clicked" WidthRequest="100" />
+							<Button Text="日本短尾貓" Clicked="Photo5_Clicked" WidthRequest="100" />-->
+					</StackLayout>
+			</ScrollView>
+			<ScrollView x:Name="xScrollView" Orientation="Horizontal">
+				<StackLayout Orientation="Horizontal">
+					<Image WidthRequest="300" x:Name="image1" Source="https://goo.gl/aYPdO7" Aspect="AspectFill" />
+					<Image WidthRequest="300" x:Name="image2" Source="https://goo.gl/dF4FWx" Aspect="AspectFill" />
+					<Image WidthRequest="300" x:Name="image3" Source="https://goo.gl/jxxgkf" Aspect="AspectFill" />
+					<Image WidthRequest="300" x:Name="image4" Source="https://goo.gl/SZ8u1I" Aspect="AspectFill" />
+					<Image WidthRequest="300" x:Name="image5" Source="https://goo.gl/DCos17" Aspect="AspectFill" />
+				</StackLayout>
+			</ScrollView>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

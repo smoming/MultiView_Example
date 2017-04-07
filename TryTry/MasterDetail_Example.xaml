@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:TryTry"
+	x:Class="TryTry.MasterDetail_Example">
+	<!--<MasterDetailPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0"/>
+	</MasterDetailPage.Padding>-->
+	<MasterDetailPage.Master>
+		<local:Master />
+	</MasterDetailPage.Master>
+	<MasterDetailPage.Detail>
+		<local:Detail />
+	</MasterDetailPage.Detail>
+</MasterDetailPage>
